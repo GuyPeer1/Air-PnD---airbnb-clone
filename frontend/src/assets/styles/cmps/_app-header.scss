@@ -1,0 +1,255 @@
+.header {
+    border-bottom: none;
+    background-color: rgb(255, 255, 255);
+    // height: 100px;
+
+    &.expanded {
+        border-bottom: 1px solid #ddd;
+        // margin-bottom: 10px;
+        // padding-bottom: 15px;
+    }
+
+    &.narrow {
+        &.expanded {
+            height: 175px;
+        }
+    }
+}
+
+
+.app-header {
+
+    .first-row-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // flex-wrap: wrap;
+        position: relative;
+        padding: 13px 0px 6px 0px;
+
+        .user-info {
+            display: flex;
+
+            .btn-airpnd-your-home {
+                font-family: circularH;
+                background-color: white;
+                font-size: 14px;
+                padding: 0px 12px 4px 12px;
+                color: #222;
+
+                &:hover {
+                    background-color: #f7f7f7;
+                    border-radius: 50px;
+                }
+            }
+
+            .btn-user {
+                background-color: white;
+                border: solid 1px #ddd;
+                border-radius: 50px;
+                color: #666f7a;
+                padding-top: em(5px);
+                padding-right: 4.5px;
+                padding-left: 10px;
+
+                img {
+                    object-fit: cover;
+                    width: em(42px);
+                    height: em(42px);
+                    border-radius: 50%;
+                }
+
+                .icon-hamburger {
+                    margin-right: em(5px);
+                }
+
+                &:hover {
+                    transition: 0.3s;
+                    box-shadow: 1px 1px 2px 2px rgb(236, 234, 234);
+                    border-radius: 50px;
+                }
+            }
+        }
+
+        .logo-container {
+            display: flex;
+            font-family: CerealBd;
+            align-items: center;
+            gap: 7px;
+            cursor: pointer;
+
+            .logo {
+                width: 32px;
+            }
+
+            .logo-title {
+                display: none;
+                font-size: 1.3em;
+                color: $clrLogo;
+                padding-right: 120px;
+
+                @media (min-width: 1128px) {
+                    display: block;
+                }
+            }
+        }
+
+        @media (max-width: 999px) {
+            .btn-airpnd-your-home {
+                display: none;
+            }
+        }
+
+        @media (max-width: 800px) {
+            .logo-container {
+                display: none;
+            }
+
+            .user-info {
+                display: none;
+            }
+        }
+    }
+
+}
+
+.shadow {
+    position: relative;
+
+    div {
+        position: absolute;
+        top: 0px;
+        min-height: 100vh;
+        width: 100%;
+
+        background-color: #a9abae;
+        opacity: 0.6;
+        z-index: 1;
+        cursor: pointer;
+
+    }
+}
+
+.hr-header {
+
+    // padding-bottom: 10px;
+    hr {
+        height: 1px;
+        background-color: #ddd;
+        border: none;
+    }
+}
+
+
+.stay-filter-header {
+    align-items: center;
+
+    .stay-filter-btns {
+        cursor: pointer;
+        border: solid 1px #ddd;
+        border-radius: 30px;
+        box-shadow: 1px 1px 1px 0px rgb(236, 234, 234);
+        gap: 1px;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+            transition: 0.2s;
+            box-shadow: 1px 1px 3px 2px rgb(236, 234, 234);
+        }
+
+        .location {
+            display: none;
+        }
+
+        .stay-filter-btn {
+            color: #222;
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 50px;
+            background-color: white;
+            font-size: 15px;
+            padding: 6px 6px;
+            margin: 0px 13px;
+            margin-right: 6px;
+
+            &.add-guests {
+                color: #717171;
+                padding-left: 2px;
+            }
+
+            &.search {
+                margin-right: 2px;
+                padding-left: 0px;
+                margin-left: 0px;
+            }
+
+            &.any-week {
+                padding-left: 3px;
+            }
+
+            &.any-where {
+                padding-left: 7px;
+                padding-right: 8px;
+            }
+        }
+
+
+        .icon-search {
+            color: white;
+            background-color: $clr3;
+            padding: 8px;
+            border-radius: 20px;
+
+        }
+
+        &>span {
+            height: 24px;
+            width: 1px;
+            background-color: #ddd;
+        }
+
+    }
+
+    @media (max-width: 800px) {
+        // background-color: aqua;
+        justify-content: space-between;
+        width: 100%;
+
+        .stay-filter-btns {
+            display: flex;
+            flex-grow: 1;
+            padding: 10px;
+            align-content: center;
+            // gap: 100px;
+
+            .any-where {
+                flex-grow: 1;
+                text-align: left;
+            }
+
+            .location {
+                // flex-grow: 1;
+                // border-radius: 50%;
+                // padding: 8px 10px;
+                width: 40px;
+                height: 40px;
+                display: inline;
+                background-color: #ddd;
+            }
+
+            .any-week,
+            .add-guests,
+            .icon-search,
+            .stay-filter-btn.search {
+                display: none;
+            }
+
+            &>span {
+                display: none;
+            }
+
+        }
+
+    }
+
+}

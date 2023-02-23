@@ -1,0 +1,267 @@
+.stay-filter-expanded {
+    font-family: CerealBd;
+    font-size: 14px;
+    width: 100%;
+    position: absolute;
+    background-color: #ffffff;
+    margin-top: 160px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+
+    .con.show {
+
+        .stay-filter-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ebebeb;
+            animation: scale-display 0.5s;
+            border: 1.5px solid #ddd;
+            border-radius: 50px;
+            padding: 0px;
+
+            .filter-where {
+                position: relative;
+                border-radius: 50px;
+                display: flex;
+                flex-direction: column;
+                padding: 13px 60px 13px 40px;
+
+                z-index: 100;
+
+                .filter-where-label {
+                    .filter-where-input {
+                        background-color: #ebebeb;
+                        outline: none;
+                        border: none;
+                    }
+                }
+            }
+
+            &:hover {
+                .filter-where {
+                    background-color: #ddd;
+
+                    .filter-where-label {
+                        .filter-where-input {
+                            background-color: #ddd;
+                        }
+                    }
+                }
+            }
+
+            &.active {
+                .filter-where {
+                    background-color: #fff;
+                    box-shadow: 0 0 15px rgb(207, 207, 207);
+
+                    .filter-where-label {
+                        .filter-where-input {
+                            background-color: #fff;
+                        }
+                    }
+                }
+            }
+
+            // }
+
+
+            .filter-check-in {
+                position: relative;
+                font-family: CerealBd;
+                border-radius: 50px;
+                display: flex;
+                flex-direction: column;
+                padding: 13px 27px;
+                background-color: #ebebeb;
+
+                &:hover {
+                    background-color: #ddd;
+                }
+
+                &.active {
+                    padding-top: 12px;
+                    // padding-buttom: 1000px;
+                    background-color: #fff;
+                    box-shadow: 0 0 15px rgb(207, 207, 207);
+                }
+
+            }
+
+            .filter-check-out {
+                font-family: CerealBd;
+                border-radius: 50px;
+                display: flex;
+                flex-direction: column;
+                padding: 13px 27px;
+                background-color: #ebebeb;
+
+                &:hover {
+                    background-color: #ddd;
+                }
+            }
+
+
+
+
+            .filter-who {
+                position: relative;
+                border-radius: 50px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-right: 10px;
+
+                &:hover {
+                    background-color: #ddd;
+                }
+
+                &.active {
+                    padding-top: 1px;
+                    padding-buttom: 1px;
+                    background-color: #fff;
+                    box-shadow: 0 0 15px rgb(207, 207, 207);
+                }
+
+                .filter-who-content {
+                    padding: 13px 39px;
+                    position: relative;
+                }
+
+                .btn-search-filter {
+                    font-family: CerealBd;
+                    color: #ffffff;
+                    font-size: 20px;
+                    width: 138px;
+                    height: 50px;
+                    border-radius: 50px;
+                    background-color: #e31a5f;
+                    display: flex;
+                    align-items: center;
+                    gap: 6px;
+
+                    @media (max-width: 1100px) {
+                        transition: 0.3s;
+                        width: 50px;
+
+                        .search-word {
+                            display: none;
+                        }
+                    }
+                }
+
+                p.search-icon {
+                    padding-left: 10px;
+                    padding-top: 6px;
+                }
+            }
+
+
+            & .unbold {
+                font-family: circularL;
+                color: #717171;
+                font-size: 16px;
+            }
+
+            @keyframes scale-display {
+                0% {
+                    height: 0;
+                    opacity: 0;
+                    transform: scale(0);
+                    -webkit-transform: scale(0);
+                }
+
+                100% {
+                    height: 100px;
+                    opacity: 1;
+                    transform: scale(1);
+                    -webkit-transform: scale(1);
+                }
+            }
+
+            &>span {
+                height: 34px;
+                width: 1px;
+                background-color: #ddd;
+            }
+
+            // @media (max-width: 800px) {
+            //     .filter-who {
+            //         display: none;
+            //     }
+
+            //     .filter-check-out {
+            //         display: none;
+            //     }
+
+            //     .filter-check-in {
+            //         display: none;
+            //     }
+
+            //     .filter-where {
+            //         // display: none;
+
+            //         background-color: aqua;
+            //         width: 400px;
+            //     }
+
+            //     // position: absolute;
+            // }
+        }
+    }
+
+    @media (max-width: 800px) {
+        margin-top: 90px;
+        width: 100%;
+        border-radius: 50px;
+
+        .con.show {
+            width: 100%;
+
+            .stay-filter-form {
+                .filter-who {
+
+                    padding-right: 0px;
+
+                    .filter-who-content {
+                        display: none;
+
+                        .number {
+                            display: none;
+                        }
+                    }
+
+                    .btn-search-filter {
+                        position: absolute;
+                        left: -65px;
+                        z-index: 10000;
+                    }
+
+                    p.search-icon {
+                        padding-left: 10px;
+                        padding-top: 6px;
+                    }
+                }
+
+
+                .filter-check-out {
+                    display: none;
+                }
+
+                .filter-check-in {
+                    display: none;
+                }
+
+                .filter-where {
+                    width: 100%;
+                }
+            }
+        }
+
+        .dark {
+            background-color: #bfbfbf;
+        }
+    }
+}

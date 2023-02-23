@@ -1,0 +1,74 @@
+.filter-who-modal {
+  position: absolute;
+  padding: em(40px);
+  top: em(80px);
+  left: em(-200px);
+  border-radius: em(30px);
+  background-color: #fff;
+  box-shadow: 0 0 15px rgb(199, 199, 199);
+  min-width: 450px;
+
+  .guest-select:not(:last-child) {
+    border-bottom: 1px solid #e7e7e7;
+  }
+
+  .guest-select {
+    justify-content: space-between;
+    padding: em(24px) em(4px) em(24px) em(0px);
+
+    .modal-btn-group {
+
+      .disable-btn {
+        &>* {
+
+          color: #dfdfdf;
+        }
+      }
+    }
+
+    .guest-select-contant {
+      display: flex;
+      flex-direction: column;
+
+      p {
+        font-family: CerealBd;
+        font-size: 16px;
+
+      }
+
+
+    }
+
+  }
+
+
+  @media (max-width: 1100px) {
+    transition: 0.3s;
+    left: em(-292px);
+
+  }
+}
+
+.modal-btn-group {
+  font-family: circularL;
+  // font-family: CerealBd;
+  // font-weight: 100;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+
+  span {
+    padding: 0px 8px
+  }
+
+  button {
+    background-color: white;
+
+
+    &>* {
+      width: 30px;
+      height: 30px;
+      color: #727272;
+    }
+  }
+}

@@ -1,0 +1,151 @@
+.filter-where-modal {
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 0 15px rgb(199, 199, 199);
+  // width: em(915px);
+  width: 800px;
+  top: em(82px);
+  left: em(0px);
+  border-radius: em(30px);
+  display: flex;
+  padding: 40px 30px;
+
+  h4 {
+    font-family: CerealBd;
+    color: #222222;
+    font-size: em(16px);
+    padding-bottom: 15px;
+  }
+
+  .common-searches {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    gap: em(20px);
+    // margin-right: 40px;
+
+
+    .common-cities {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: em(10px);
+      cursor: pointer;
+      padding-left: 10px;
+
+      .place-icon {
+        background-color: #ebebeb;
+        padding: em(15px) em(17px);
+        border-radius: em(15px);
+
+        &>* {
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      .place-content {
+        font-family: circularL;
+
+        .common-city {
+          color: #222222;
+          font-size: em(17px);
+        }
+
+        .common-country {
+          font-size: em(14px);
+          color: #717171;
+        }
+
+      }
+
+      &:hover {
+        background-color: #f8f8f8f9;
+      }
+    }
+  }
+
+  .common-countries {
+    flex-grow: 1;
+    border-left: #e7e7e7 1px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding-left: 50px;
+
+
+    .countries-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      justify-items: center;
+      align-items: center;
+      gap: 20px;
+
+      .country {
+        cursor: pointer;
+
+        img {
+          width: 140px;
+          border-radius: 10px;
+          border: #dddddd 1px solid;
+
+          &:hover {
+            transition: 0.3s;
+            border: #373737 1px solid;
+          }
+        }
+
+        p {
+          font-family: circularL;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1100px) {
+    transition: 0.3s;
+    width: 712px;
+
+
+    .common-cities {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .common-countries {
+      padding-left: 20px;
+    }
+
+  }
+
+  @media (max-width: 800px) {
+    transition: 0.3s;
+    width: 100%;
+
+    // display: ;
+    flex-direction: column;
+
+    .common-cities {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .common-countries {
+      padding-top: 20px;
+
+      .countries-list {
+        // display: grid;
+        // grid-template-columns: 1fr 1fr;
+        // grid-template-rows: 1fr 1fr 1frs;
+        // justify-items: center;
+        // align-items: center;
+        // gap: 20px;
+        display: none;
+      }
+    }
+
+  }
+}

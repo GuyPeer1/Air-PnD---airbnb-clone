@@ -1,0 +1,98 @@
+.stay-expanded {
+    display: flex;
+    margin-top: em(50px);
+
+    .expanded-left {
+        flex-grow: 1;
+    }
+
+    .capacity {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        border-bottom: em(1px) solid $clrBorderGray;
+
+        .owner {
+            grid-row: 1;
+            font-size: em(16px);
+            padding-bottom: em(10px);
+        }
+
+        .guests {
+            grid-row: 2;
+            color: $clrBlackFont;
+            font-weight: 400;
+            font-size: em(18px);
+            line-height: em(16px);
+
+            span {
+                padding: em(6px);
+            }
+
+        }
+    }
+
+    .img-host{
+        width: em(61px);
+        height: em(61px);
+        border-radius: 50%;
+        justify-self: end;
+        grid-row: 1 / -1;
+    }
+
+    .host {
+        display: flex;
+        margin-top: em(30px);
+
+        .img-activity {
+            padding-top: em(3px);
+        }
+    }
+
+
+    .txt {
+        display: flex;
+        flex-direction: column;
+        font-weight: 600;
+        font-size: em(18px);
+        line-height: em(20px);
+        margin-left: em(16px);
+    }
+
+    .head-span {
+        margin-top: em(5px);
+        font-size: em(14px);
+        line-height: em(20px);
+        color: $clrGrayFont;
+        font-weight: 400;
+    }
+
+    .air-cover {
+        border-top: em(1px) solid $clrBorderGray;
+        margin-top: em(30px);
+        display: flex;
+        flex-direction: column;
+
+        .air {
+            width: em(124px);
+            height: em(26px);
+            border-radius: 0;
+            margin-top: em(33px);
+            margin-bottom: em(26px);
+        }
+
+        .txt {
+            font-size: em(18px);
+            line-height: em(18px);
+            font-weight: inherit;
+            margin-left: 0;
+        }
+
+        .more {
+            margin-top: em(15px);
+            color: $clrBlackFont;
+            text-decoration: underline;
+            font-weight: bold;
+            font-size: em(18px);
+        }
+    }
+}

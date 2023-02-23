@@ -1,0 +1,165 @@
+.book-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: em(58px);
+  align-self: flex-start;
+  width: clamp(680px, 33.333%, 24.875em);
+  padding: em(10px) em(32px);
+  border: em(1px) solid $clrBorderGray;
+  border-radius: em(12px);
+  box-shadow: rgb(0 0 0 / 12%) 0px 6px 16px;
+  position: sticky;
+  top: em(50px);
+
+  @include for-mobile-layout {
+    display: none;
+}
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: em(16px);
+    padding-bottom: em(19px);
+    width: 100%;
+
+    .right-side{
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .price {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .rating{
+      display: flex;
+      align-items: center;
+      font-size: em(13px);
+      font-weight: 600;
+
+      .img-star{
+        width: em(16px);
+        height: em(16px);
+        margin-right: em(4px);
+        margin-bottom: em(3px);
+      }
+    }
+
+    .seperator{
+      padding-left: em(7px);
+      padding-right: em(7px);
+    }
+
+    .night {
+      font-weight: normal;
+    }
+
+    .reviews {
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: underline;
+      color: $clrGrayFont;
+    }
+  }
+
+  .action-btn {
+    position: relative;
+    width: 100%;
+
+    :hover {
+      cursor: pointer;
+    }
+  }
+
+  .checkin-out {
+    color: $clrBlackFont;
+    display: flex;
+    font-size: em(12px);
+    
+    .checkin {
+      flex-direction: column;
+      flex: 1;
+      border-top-left-radius: em(8px);
+      border-bottom: none;
+      border-right: none !important;
+      font-weight: 600;
+      padding: em(14px) em(14px);
+      border: em(1px) solid rgba(0, 0, 0, .32);
+      font-family: circularH;
+      font-size: em(14px);
+    }
+
+    .checkout {
+      flex-direction: column;
+      flex: 1;
+      border-top-right-radius: em(8px);
+      font-weight: 600;
+      border-bottom: none;
+      padding: em(14px) em(14px);
+      border: em(1px) solid rgba(0, 0, 0, .32);
+      font-family: circularH;
+      font-size: em(14px);
+    }
+
+    span {
+      font-weight: 400;
+      font-family: circularL;
+      padding-top: em(2px);
+      font-size: em(22px);
+    }
+  }
+
+  label {
+    font-size: 18px;
+  }
+
+  p {
+    text-align: center;
+    color: $clrGrayFont;
+  }
+
+  .summary {
+    width: 100%;
+    margin-top: 20px;
+
+    .prices {
+
+      .cash {
+        display: flex;
+        justify-content: space-between;
+        color: $clrGrayFont;
+        font-weight: normal;
+        line-height: em(40px);
+        color: $clrBlackFont;
+
+
+        .left {
+          text-decoration: underline;
+        }
+
+      }
+
+    }
+
+    .total {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: em(18px);
+      font-weight: 600;
+      margin-top: em(16px);
+      border-top: em(1px) solid rgb(221, 221, 221);
+      padding-top: em(20px);
+    }
+  }
+
+  .date-range {
+    position: absolute;
+    z-index: 1000;
+    top: em(75px);
+    right: .5px;
+  }
+}

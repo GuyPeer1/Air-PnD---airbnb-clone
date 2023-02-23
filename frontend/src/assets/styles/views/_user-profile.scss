@@ -1,0 +1,201 @@
+.user-orders {
+    background-color: #f3f3f3;
+    padding: em(12px);
+    border-radius: 5px;
+}
+
+.nav-orders-details {
+    display: flex;
+    background-color: #f3f3f3;
+    justify-content: space-between;
+    gap: em(10px);
+
+    .btn-link {
+        font-family: circularH;
+        width: 50%;
+        padding: em(10px);
+        border-radius: em(10px);
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        border: 1px solid rgb(202, 202, 202);
+        text-decoration: none;
+        color: $clrBlackFont;
+    }
+
+    .active {
+        color: $clr3;
+        border: 1px solid $clr3;
+    }
+}
+
+.orders-details {
+    display: flex;
+    padding: em(5px);
+    margin-top: em(15px);
+    gap: em(15px);
+    background-color: #fff;
+    padding-bottom: em(65px);
+
+    @media (max-width: 720px) {}
+
+    .order-list {
+        background-color: #fff;
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+        gap: em(10px);
+        width: 50%;
+    }
+}
+
+.order-preview {
+    display: grid;
+
+    @media(min-width:720px) {
+        grid-template-columns: 1fr auto;
+    }
+
+    gap: 10px;
+    font-family: circularL;
+    padding: em(10px);
+    position: relative;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 2px solid white;
+
+    &.selected-order {
+        border: 2px solid $clrGrayFont;
+    }
+
+    &:hover {
+        border: 2px solid $clrGrayFont;
+    }
+
+    .preview-txt {
+        display: flex;
+        flex-direction: column;
+
+        .preview-name {
+            font-weight: 600;
+        }
+
+        .preview-loc {
+            font-weight: 300;
+        }
+    }
+
+    .order-indiction {
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        font-family: circularH;
+
+
+        p {
+
+            &.approved {
+                color: rgb(1, 159, 1);
+            }
+
+            &.declined {
+                color: rgb(255, 76, 76);
+            }
+
+            &.pending {
+                color: rgb(252, 141, 6);
+            }
+        }
+    }
+}
+
+.order-preview-modal {
+    width: 50%;
+    border-radius: em(8px);
+    box-shadow: #0000001f 0 6px 16px;
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    position: sticky;
+    top: em(50px);
+
+    @media(min-width:720px) {
+        display: block;
+    }
+
+    .order-display {
+        padding: em(8px);
+
+        @media(min-width:720px) {
+            padding: em(24px);
+        }
+    }
+
+    .order-img {
+
+        :nth-child(2),
+        :nth-child(3) {
+            display: none;
+        }
+
+
+        @media(min-width: 720px) {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: em(150px) em(150px);
+            gap: 4px;
+
+            :hover {
+                transition: 0.4s;
+                filter: brightness(80%);
+            }
+
+            img {
+                object-fit: cover;
+                background-size: cover;
+                height: 100%;
+            }
+
+            :first-child {
+                grid-row: 1/-1;
+                border-start-start-radius: 8px;
+                border-end-start-radius: 8px;
+            }
+
+            :nth-child(2) {
+                display: block;
+                border-start-end-radius: 8px;
+            }
+
+            :nth-child(3) {
+                display: block;
+                border-end-end-radius: 8px;
+            }
+        }
+    }
+
+    .order-preview-details-modal {
+        font-family: circularH;
+        display: flex;
+        flex-direction: column;
+        padding-top: em(4px);
+        padding-left: em(4px);
+
+        @media(min-width:720px) {
+            padding-top: em(16px);
+            padding-left: em(28px);
+        }
+
+        .preview-bold {
+            padding-bottom: em(8px);
+            font-weight: 600;
+
+            .regular {
+                font-weight: 600;
+                font-family: circularL;
+            }
+        }
+
+    }
+
+}

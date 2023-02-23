@@ -1,0 +1,29 @@
+.host-dashboard {
+    padding: em(12px);
+    border-radius: 5px;
+}
+
+.nav-orders-details-host {
+    display: flex;
+    justify-content: space-between;
+    gap: em(10px);
+
+    .btn-link-host {
+        font-family: circularH;
+        width: 50%;
+        padding: em(10px);
+        border-radius: em(10px);
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        border: 1px solid rgb(202, 202, 202);
+        text-decoration: none;
+        color: $clrBlackFont;
+
+    }
+
+    .active {
+        color: $clr3;
+        border: 1px solid $clr3;
+    }
+}
